@@ -6,7 +6,6 @@ import {
   MapPin,
   Phone,
   Send,
-  Twitch,
   Twitter,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -93,17 +92,17 @@ export const ContactSection = () => {
 
             <div className="pt-8">
               <h4 className="font-medium mb-4"> Connect With Me</h4>
-              <div className="flex space-x-4 justify-center">
-                <a className="text-blue-600" href="https://www.facebook.com/Sifat.tarafder.5" target="_blank">
+              <div className="flex space-x-4 justify-center text-glow">
+                <a className="text-blue-600 hover:text-blue-500 transition" href="https://www.facebook.com/Sifat.tarafder.5" target="_blank">
                   <Facebook/>
                 </a>
-                <a className="text-indigo-600" href="https://www.linkedin.com/in/tmdsifat98/" target="_blank">
+                <a className="text-indigo-600 hover:text-indigo-500 transition" href="https://www.linkedin.com/in/tmdsifat98/" target="_blank">
                   <Linkedin />
                 </a>
-                <a className="text-blue-400" href="https://x.com/SifatTarafder98" target="_blank">
+                <a className="text-blue-400 hover:text-blue-500 transition" href="https://x.com/SifatTarafder98" target="_blank">
                   <Twitter />
                 </a>
-                <a className="text-rose-600" href="https://www.instagram.com/sifat_trf98/" target="_blank">
+                <a className="text-rose-600 hover:text-red-500 transition" href="https://www.instagram.com/sifat_trf98/" target="_blank">
                   <Instagram />
                 </a>
               </div>
