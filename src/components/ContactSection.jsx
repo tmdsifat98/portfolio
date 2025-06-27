@@ -32,7 +32,7 @@ export const ContactSection = () => {
   return (
     <section id="contact" className="py-24 px-4 relative bg-secondary/30">
       <div className="container mx-auto max-w-5xl">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
+        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center text-glow">
           Get In <span className="text-primary"> Touch</span>
         </h2>
 
@@ -68,7 +68,7 @@ export const ContactSection = () => {
                   <Phone className="h-6 w-6 text-primary" />{" "}
                 </div>
                 <div className="flex flex-col items-start">
-                  <h4 className="font-medium"> Phone</h4>
+                  <h4 className="font-medium">Phone/WhatsApp</h4>
                   <a
                     href="tel:+8801521730173"
                     className="text-muted-foreground hover:text-primary transition-colors"
@@ -90,9 +90,9 @@ export const ContactSection = () => {
               </div>
             </div>
 
-            <div className="pt-8">
-              <h4 className="font-medium mb-4"> Connect With Me</h4>
-              <div className="flex space-x-4 justify-center text-glow">
+            <div className="p-6">
+              <h4 className="font-medium text-start mb-4 text-glow"> Connect With Me</h4>
+              <div className="flex space-x-4 text-glow">
                 <a className="text-blue-600 hover:text-blue-500 transition" href="https://www.facebook.com/Sifat.tarafder.5" target="_blank">
                   <Facebook/>
                 </a>
@@ -118,26 +118,8 @@ export const ContactSection = () => {
             <form className="space-y-6">
               <div>
                 <label
-                  htmlFor="name"
-                  className="block text-sm font-medium mb-2"
-                >
-                  {" "}
-                  Your Name
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  required
-                  className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden foucs:ring-2 focus:ring-primary"
-                  placeholder="Sifat Tarafd..."
-                />
-              </div>
-
-              <div>
-                <label
                   htmlFor="email"
-                  className="block text-sm font-medium mb-2"
+                  className="block text-sm text-start font-medium mb-2"
                 >
                   {" "}
                   Your Email
@@ -155,7 +137,7 @@ export const ContactSection = () => {
               <div>
                 <label
                   htmlFor="message"
-                  className="block text-sm font-medium mb-2"
+                  className="block text-start text-sm font-medium mb-2"
                 >
                   {" "}
                   Your Message
@@ -173,7 +155,7 @@ export const ContactSection = () => {
                 type="submit"
                 disabled={isSubmitting}
                 className={cn(
-                  "cosmic-button w-full flex items-center justify-center gap-2"
+                  "cosmic-button w-full flex items-center justify-center gap-2 cursor-pointer"
                 )}
               >
                 {isSubmitting ? "Sending..." : "Send Message"}

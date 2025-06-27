@@ -2,6 +2,7 @@ import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { ThemeToggle } from "./ThemeToggle";
+import logo from '../../public/logo2.png';
 
 const navItems = [
   { name: "Home", href: "#hero" },
@@ -27,15 +28,17 @@ export const Navbar = () => {
     <nav
       className={cn(
         "w-11/12 mx-auto z-40 transition-all duration-300",
-        isScrolled ? "py-3 bg-background/80 backdrop-blur-md shadow-xs" : "py-5"
+        isScrolled ? " bg-background/80 backdrop-blur-md shadow-xs" : "py-2"
       )}
     >
       <div className="flex items-center justify-between">
         {/* Logo */}
+        
         <a
           className="text-xl font-bold text-primary flex items-center"
           href="#hero"
         >
+          <img src={logo} alt="logo" className="w-12 p-0" />
           <span className="relative z-10">
             <span className="text-glow text-foreground"> Sifat </span> Tarafder
           </span>
@@ -47,15 +50,21 @@ export const Navbar = () => {
             <a
               key={key}
               href={item.href}
-              className="text-foreground/80 hover:text-primary transition-colors duration-300"
+              className="text-black font-semibold hover:text-primary transition-colors duration-300"
             >
               {item.name}
             </a>
           ))}
+          <a className="md:hidden">
+            <ThemeToggle />
+          </a>
         </div>
 
         {/* Right side controls */}
         <div className="flex items-center space-x-2 md:space-x-4">
+          {/* Theme toggle - Always visible */}
+          <ThemeToggle />
+          
           {/* Mobile menu button */}
           <button
             onClick={() => setIsMenuOpen((prev) => !prev)}
@@ -65,13 +74,9 @@ export const Navbar = () => {
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
 
-          {/* Theme toggle & Hire Me */}
+          {/* Hire Me - Desktop only */}
           <div className="hidden md:flex items-center space-x-3">
-            <ThemeToggle />
-            <a
-              href="#contact"
-              className="cosmic-button"
-            >
+            <a href="#contact" className="cosmic-button">
               Hire Me
             </a>
           </div>
