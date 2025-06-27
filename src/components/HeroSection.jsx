@@ -11,16 +11,16 @@ export const HeroSection = () => {
         <img
           src={heroImage}
           alt="hero image"
-          className="w-60 h-60 object-cover rounded-full bg-gradient-to-r from-blue-500 to-purple-600"
+          className="w-60 h-60 object-cover rounded-full bg-gradient-to-r from-rose-600 to-purple-600"
         />
         <div className="space-y-6">
           <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
             <span className="opacity-0 animate-fade-in"> Hi, I'm</span>
-            <span className="text-primary opacity-0 animate-fade-in-delay-1 text-glow">
+            <span className="text-gradient opacity-0 animate-fade-in-delay-1 text-glow">
               {" "}
               Sifat
             </span>
-            <span className="text-gradient ml-2 opacity-0 animate-fade-in-delay-2 text-glow">
+            <span className="ml-2 opacity-0 animate-fade-in-delay-2 text-glow">
               {" "}
               Tarafder
             </span>
@@ -60,14 +60,14 @@ export const HeroSection = () => {
           </ul>
 
           <div className="pt-4 opacity-0 animate-fade-in-delay-4">
-            <a href="#projects" className="cosmic-button">
+            <a href="#projects" className="cosmic-button bg-gradient-to-r from-rose-600 to-purple-600">
               View My Work
             </a>
           </div>
         </div>
       </div>
 
-      <div className="absolute bottom-2 md:bottom-5 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce">
+      <div className="absolute bottom-2 md:bottom-3 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce">
         <span className="text-sm text-muted-foreground mb-2"> Scroll </span>
         <ArrowDown className="h-5 w-5 text-primary" />
       </div>

@@ -160,3 +160,9 @@
   padding: 0;
   text-align: center;
 }
+
+.text-gradient, .text-grad:hover {
+  background-image: linear-gradient(to right, #e11d48, #9333ea);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

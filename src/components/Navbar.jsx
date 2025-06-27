@@ -35,12 +35,12 @@ export const Navbar = () => {
         {/* Logo */}
         
         <a
-          className="text-xl font-bold text-primary flex items-center"
-          href="#hero"
+          className="text-xl font-bold flex items-center"
+          href="#"
         >
           <img src={logo} alt="logo" className="w-12 p-0" />
           <span className="relative z-10">
-            <span className="text-glow text-foreground"> Sifat </span> Tarafder
+            <span className="text-glow text-gradient"> Sifat </span> Tarafder
           </span>
         </a>
 
@@ -50,7 +50,7 @@ export const Navbar = () => {
             <a
               key={key}
               href={item.href}
-              className="text-black font-semibold hover:text-primary transition-colors duration-300"
+              className="text-black font-semibold text-grad transition-colors duration-300"
             >
               {item.name}
             </a>
@@ -76,7 +76,7 @@ export const Navbar = () => {
 
           {/* Hire Me - Desktop only */}
           <div className="hidden md:flex items-center space-x-3">
-            <a href="#contact" className="cosmic-button">
+            <a href="#contact" className="px-6 py-2 rounded-full border  border-primary font-semibold transition-all duration-300 bg-gradient-to-r from-rose-600 to-purple-600 bg-[length:100%_100%] hover:bg-[length:0%_100%] bg-no-repeat bg-left">
               Hire Me
             </a>
           </div>

@@ -7,6 +7,7 @@ import { SkillsSection } from "../components/SkillsSection";
 import { ProjectsSection } from "../components/ProjectsSection";
 import { ContactSection } from "../components/ContactSection";
 import { Footer } from "../components/Footer";
+import { Education } from "../components/Education";
 
 export const Home = () => {
   return (
@@ -15,15 +16,16 @@ export const Home = () => {
       <StarBackground />
 
       {/* Navbar */}
-     <div className="backdrop-blur-sm sticky top-0 bg-white/30 z-[999]">
-       <Navbar />
-     </div>
+      <div className="backdrop-blur-sm sticky top-0 bg-white/30 z-[999]">
+        <Navbar />
+      </div>
       {/* Main Content */}
       <main>
         <HeroSection />
         <AboutSection />
         <SkillsSection />
         <ProjectsSection />
+        <Education />
         <ContactSection />
       </main>
 

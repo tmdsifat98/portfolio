@@ -47,7 +47,7 @@ export const SkillsSection = () => {
     <section id="skills" className="py-24 px-4 relative bg-secondary/30">
       <div className="">
         <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-glow">
-          My <span className="text-primary"> Skills</span>
+          My <span className="text-gradient"> Skills</span>
         </h2>
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           {categories.map((category, key) => (
@@ -57,7 +57,7 @@ export const SkillsSection = () => {
               className={cn(
                 "px-5 py-2 rounded-full transition-colors duration-300 capitalize cursor-pointer",
                 activeCategory === category
-                  ? "bg-primary text-primary-foreground"
+                  ? "bg-gradient-to-r from-rose-600 to-purple-600 text-primary-foreground"
                   : "bg-secondary/70 text-forefround hover:bd-secondary"
               )}
             >
@@ -78,7 +78,7 @@ export const SkillsSection = () => {
               </div>
               <div className="w-full gap-6 bg-secondary/50 h-2 flex items-center justify-between rounded-full">
                 <div
-                  className="bg-primary h-2 rounded-full origin-left animate-[grow_1.5s_ease-out]"
+                  className="bg-gradient-to-r from-rose-600 to-purple-600 h-2 rounded-full origin-left animate-[grow_1.5s_ease-out]"
                   style={{ width: skill.level + "%" }}
                 />
                 <div className="text-right">

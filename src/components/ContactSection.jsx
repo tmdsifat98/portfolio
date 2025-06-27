@@ -9,11 +9,10 @@ import {
   Twitter,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
+import { toast } from "react-toastify";
 
 export const ContactSection = () => {
-  const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = (e) => {
@@ -22,18 +21,16 @@ export const ContactSection = () => {
     setIsSubmitting(true);
 
     setTimeout(() => {
-      toast({
-        title: "Message sent!",
-        description: "Thank you for your message. I'll get back to you soon.",
-      });
+      toast("Thank you for your message. I'll get back to you soon.");
       setIsSubmitting(false);
+      e.target.reset();
     }, 1500);
   };
   return (
     <section id="contact" className="py-24 px-4 relative bg-secondary/30">
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center text-glow">
-          Get In <span className="text-primary"> Touch</span>
+          Get In <span className="text-gradient"> Touch</span>
         </h2>
 
         <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
@@ -91,18 +88,37 @@ export const ContactSection = () => {
             </div>
 
             <div className="p-6">
-              <h4 className="font-medium text-start mb-4 text-glow"> Connect With Me</h4>
+              <h4 className="font-medium text-start mb-4 text-glow">
+                {" "}
+                Connect With Me
+              </h4>
               <div className="flex space-x-4 text-glow">
-                <a className="text-blue-600 hover:text-blue-500 transition" href="https://www.facebook.com/Sifat.tarafder.5" target="_blank">
-                  <Facebook/>
+                <a
+                  className="text-blue-600 hover:text-blue-500 transition"
+                  href="https://www.facebook.com/Sifat.tarafder.5"
+                  target="_blank"
+                >
+                  <Facebook />
                 </a>
-                <a className="text-indigo-600 hover:text-indigo-500 transition" href="https://www.linkedin.com/in/tmdsifat98/" target="_blank">
+                <a
+                  className="text-indigo-600 hover:text-indigo-500 transition"
+                  href="https://www.linkedin.com/in/tmdsifat98/"
+                  target="_blank"
+                >
                   <Linkedin />
                 </a>
-                <a className="text-blue-400 hover:text-blue-500 transition" href="https://x.com/SifatTarafder98" target="_blank">
+                <a
+                  className="text-blue-400 hover:text-blue-500 transition"
+                  href="https://x.com/SifatTarafder98"
+                  target="_blank"
+                >
                   <Twitter />
                 </a>
-                <a className="text-rose-600 hover:text-red-500 transition" href="https://www.instagram.com/sifat_trf98/" target="_blank">
+                <a
+                  className="text-rose-600 hover:text-red-500 transition"
+                  href="https://www.instagram.com/sifat_trf98/"
+                  target="_blank"
+                >
                   <Instagram />
                 </a>
               </div>
@@ -155,7 +171,7 @@ export const ContactSection = () => {
                 type="submit"
                 disabled={isSubmitting}
                 className={cn(
-                  "cosmic-button w-full flex items-center justify-center gap-2 cursor-pointer"
+                  "px-6 py-2 rounded-full border  border-primary font-semibold transition-all duration-300 bg-gradient-to-r from-rose-600 to-purple-600 bg-[length:100%_100%] hover:bg-[length:0%_100%] bg-no-repeat bg-left w-full flex items-center justify-center gap-2 cursor-pointer"
                 )}
               >
                 {isSubmitting ? "Sending..." : "Send Message"}

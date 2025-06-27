@@ -45,7 +45,7 @@ export const ProjectsSection = () => {
       <div className="container mx-auto max-w-6xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center text-glow">
           {" "}
-          Featured <span className="text-primary"> Projects </span>
+          Featured <span className="text-gradient"> Projects </span>
         </h2>
 
         <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
@@ -106,7 +106,7 @@ export const ProjectsSection = () => {
 
         <div className="text-center mt-12">
           <a
-            className="cosmic-button w-fit flex items-center mx-auto gap-2"
+            className="w-fit flex items-center mx-auto gap-2 px-6 py-2 rounded-full border  border-primary font-semibold transition-all duration-300 bg-gradient-to-r from-rose-600 to-purple-600 bg-[length:100%_100%] hover:bg-[length:0%_100%] bg-no-repeat bg-left"
             target="_blank"
             href="https://github.com/tmdsifat98"
           >

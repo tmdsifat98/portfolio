@@ -32,7 +32,7 @@ export const ThemeToggle = () => {
     <button
       onClick={toggleTheme}
       className={cn(
-        "rounded-full transition-colors duration-300",
+        "rounded-full transition-colors duration-300 cursor-pointer",
         "focus:outlin-hidden"
       )}
     >
