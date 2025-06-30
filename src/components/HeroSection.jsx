@@ -1,5 +1,7 @@
 import { ArrowDown, CodeXml, Github, Linkedin, Twitter } from "lucide-react";
 import heroImage from "../../public/purple.png";
+import { FaDownload, FaWhatsapp } from "react-icons/fa6";
+import { BsLink45Deg } from "react-icons/bs";
 
 export const HeroSection = () => {
   return (
@@ -38,6 +40,13 @@ export const HeroSection = () => {
               </a>
             </li>
             <a
+              className="text-green-500 hover:text-green-600 transition"
+              href="https://wa.me/8801521730173"
+              target="_blank"
+            >
+              <FaWhatsapp size={23} />
+            </a>
+            <a
               className="text-indigo-600 hover:text-indigo-500 transition"
               href="https://www.linkedin.com/in/tmdsifat98/"
               target="_blank"
@@ -52,7 +61,7 @@ export const HeroSection = () => {
               <Twitter />
             </a>
             <a
-              className="text-gray-600 hover:text-gray-500 transition"
+              className="text-slate-600 hover:text-gray-500 transition"
               href="https://github.com/tmdsifat98"
               target="_blank"
             >
@@ -60,12 +69,20 @@ export const HeroSection = () => {
             </a>
           </ul>
 
-          <div className="pt-4 opacity-0 animate-fade-in-delay-4">
+          <div className="pt-4 opacity-0 flex gap-2 items-center justify-center animate-fade-in-delay-4">
             <a
               href="#projects"
-              className="cosmic-button bg-gradient-to-r from-rose-600 to-purple-600"
+              className="px-6 py-2 rounded-full border  flex items-center justify-center gap-2 border-primary font-semibold transition-all duration-300 bg-gradient-to-r from-rose-600 to-purple-600 bg-[length:100%_100%] hover:bg-[length:0%_100%] bg-no-repeat bg-left"
             >
-              View My Work
+              View My Project <BsLink45Deg size={21} />
+            </a>
+            <a
+              target="_blank"
+              href="https://drive.google.com/file/d/1nr7SNq4rSsdU9ze2t_lOhrJ2R5Mi85zM/view?usp=sharing"
+              className="px-6 py-2 rounded-full border flex items-center justify-center gap-2 border-primary font-semibold transition-all duration-300
+                bg-gradient-to-r from-rose-600 to-purple-600 bg-[length:0%_100%] hover:bg-[length:100%_100%] bg-no-repeat bg-left"
+            >
+              Download Resume <FaDownload />
             </a>
           </div>
         </div>

@@ -50,7 +50,7 @@ export const Navbar = () => {
             <a
               key={key}
               href={item.href}
-              className="text-black font-semibold text-grad transition-colors duration-300"
+              className="font-semibold text-grad transition-colors duration-300"
             >
               {item.name}
             </a>
