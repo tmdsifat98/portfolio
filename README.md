@@ -3,10 +3,7 @@
 <div align="center">
   <br />
     <img src="https://i.ibb.co/S48tKjJB/Screenshot-2025-07-04-234524.png" alt="Portfolio Website Banner">
-<<<<<<< HEAD
   <br />
-=======
->>>>>>> 11ad9b4b16780b81673647934fe52ebecbdd17dd
   <br />
   <div>
     <img src="https://img.shields.io/badge/-React-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React" />
