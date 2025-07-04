@@ -1,7 +1,7 @@
 import logo from '../../public/logo2.png';
 export const Footer = () => {
   return (
-    <footer className="w-full mt-20 bg-gradient-to-r from-[#44cf44]/20 to-transparent dark:from-[#44cf44]/10">
+    <footer className="w-full mt-20 bg-gradient-to-r to-transparent dark:from-gray-300/30">
       <div className="container mx-auto px-4 py-10 flex flex-col items-center text-center">
         {/* Brand */}
         <div className='flex items-center'>

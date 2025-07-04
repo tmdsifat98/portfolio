@@ -7,12 +7,14 @@ export const ThemeToggle = () => {
 
   useEffect(() => {
     const storedTheme = localStorage.getItem("theme");
-    if (storedTheme === "dark") {
+    if (storedTheme === "light") {
+      setIsDarkMode(false);
+      document.documentElement.classList.remove("dark");
+    } else {
+      // Default dark
       setIsDarkMode(true);
       document.documentElement.classList.add("dark");
-    } else {
-      localStorage.setItem("theme", "light");
-      setIsDarkMode(false);
+      localStorage.setItem("theme", "dark");
     }
   }, []);
 
@@ -33,8 +35,9 @@ export const ThemeToggle = () => {
       onClick={toggleTheme}
       className={cn(
         "rounded-full transition-colors duration-300 cursor-pointer",
-        "focus:outlin-hidden"
+        "focus:outline-none"
       )}
+      aria-label="Toggle Theme"
     >
       {isDarkMode ? (
         <Sun className="h-6 w-6 text-yellow-300" />

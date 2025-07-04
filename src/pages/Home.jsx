@@ -16,7 +16,7 @@ export const Home = () => {
       <StarBackground />
 
       {/* Navbar */}
-      <div className="backdrop-blur-sm sticky top-0 bg-white/30 z-[999]">
+      <div className="backdrop-blur-sm sticky top-0 bg-white/30 z-[999] transition-all duration-300 shadow-xs py-3">
         <Navbar />
       </div>
       {/* Main Content */}

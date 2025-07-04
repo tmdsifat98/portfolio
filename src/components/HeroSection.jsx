@@ -74,7 +74,7 @@ export const HeroSection = () => {
               href="#projects"
               className="px-6 py-2 rounded-full border  flex items-center justify-center gap-2 border-primary font-semibold transition-all duration-300 bg-gradient-to-r from-rose-600 to-purple-600 bg-[length:100%_100%] hover:bg-[length:0%_100%] bg-no-repeat bg-left"
             >
-              View My Project <BsLink45Deg size={21} />
+              <span className="hidden md:flex">View My</span> Projects <BsLink45Deg size={19} />
             </a>
             <a
               target="_blank"
@@ -82,7 +82,7 @@ export const HeroSection = () => {
               className="px-6 py-2 rounded-full border flex items-center justify-center gap-2 border-primary font-semibold transition-all duration-300
                 bg-gradient-to-r from-rose-600 to-purple-600 bg-[length:0%_100%] hover:bg-[length:100%_100%] bg-no-repeat bg-left"
             >
-              Download Resume <FaDownload />
+              <span className="hidden md:flex">Download</span> Resume <FaDownload />
             </a>
           </div>
         </div>

@@ -14,25 +14,87 @@ import { VscVscodeInsiders } from "react-icons/vsc";
 
 const skills = [
   // Frontend
-  { Icon: FaHtml5, name: "HTML/CSS", level: 85, category: "frontend" },
+  {
+    Icon: FaHtml5,
+    name: "HTML/CSS",
+    level: 85,
+    category: "frontend",
+    color: "text-orange-500",
+  },
   {
     Icon: RiTailwindCssFill,
     name: "Tailwind CSS",
     level: 90,
     category: "frontend",
+    color: "text-sky-400",
   },
-  { Icon: FaJs, name: "JavaScript", level: 70, category: "frontend" },
-  { Icon: FaReact, name: "React", level: 90, category: "frontend" },
+  {
+    Icon: FaJs,
+    name: "JavaScript",
+    level: 70,
+    category: "frontend",
+    color: "text-yellow-400",
+  },
+  {
+    Icon: FaReact,
+    name: "React",
+    level: 90,
+    category: "frontend",
+    color: "text-cyan-400",
+  },
 
-  // // Backend
-  { Icon: FaNodeJs, name: "NodeJS", level: 80, category: "backend" },
-  { Icon: SiExpress, name: "ExpressJS", level: 75, category: "backend" },
-  { Icon: SiMongodb, name: "MongoDB", level: 70, category: "backend" },
-  // //Tools
-  { Icon: FaGithub, name: "Git/GitHub", level: 90, category: "tools" },
-  { Icon: RiFirebaseFill, name: "Firebase", level: 70, category: "tools" },
-  { Icon: FaFigma, name: "Figma", level: 85, category: "tools" },
-  { Icon: VscVscodeInsiders, name: "VS Code", level: 95, category: "tools" },
+  // Backend
+  {
+    Icon: FaNodeJs,
+    name: "NodeJS",
+    level: 80,
+    category: "backend",
+    color: "text-green-600",
+  },
+  {
+    Icon: SiExpress,
+    name: "ExpressJS",
+    level: 75,
+    category: "backend",
+    color: "text-gray-500",
+  },
+  {
+    Icon: SiMongodb,
+    name: "MongoDB",
+    level: 70,
+    category: "backend",
+    color: "text-green-700",
+  },
+
+  // Tools
+  {
+    Icon: FaGithub,
+    name: "Git/GitHub",
+    level: 90,
+    category: "tools",
+    color: "text-gray-800",
+  },
+  {
+    Icon: RiFirebaseFill,
+    name: "Firebase",
+    level: 70,
+    category: "tools",
+    color: "text-orange-400",
+  },
+  {
+    Icon: FaFigma,
+    name: "Figma",
+    level: 85,
+    category: "tools",
+    color: "text-pink-500",
+  },
+  {
+    Icon: VscVscodeInsiders,
+    name: "VS Code",
+    level: 95,
+    category: "tools",
+    color: "text-blue-500",
+  },
 ];
 
 const categories = ["all", "frontend", "backend", "tools"];
@@ -70,11 +132,11 @@ export const SkillsSection = () => {
           {filteredSkills.map((skill, key) => (
             <div
               key={key}
-              className="bg-card p-6 rounded-lg shadow-xs card-hover"
+              className="bg-card p-6 rounded-lg shadow transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg"
             >
               <div className="text-left mb-4 flex items-center gap-5">
                 <h3 className="font-semibold text-lg"> {skill.name}</h3>
-                <skill.Icon size={21} />
+                <skill.Icon size={21} className={skill.color} />
               </div>
               <div className="w-full gap-6 bg-secondary/50 h-2 flex items-center justify-between rounded-full">
                 <div

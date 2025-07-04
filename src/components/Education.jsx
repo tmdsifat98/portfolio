@@ -7,7 +7,7 @@ export const Education = () => {
       institution: "University of Rajshahi",
       year: "2023 - Current",
       details:
-        "Focused on Research, Web Development, and Data Structures. Graduated with honors and participated in various research and web development career."
+        "Focused on Research, Web Development, and Data Structures. Passionate about collaborating on projects that drive positive change and technological advancement."
     },
     {
       degree: "Higher Secondary Certificate",
@@ -32,7 +32,7 @@ export const Education = () => {
       </h2>
       <div className="relative">
         {/* Vertical line */}
-        <div className="absolute left-4 top-0 h-full w-1 bg-gradient-to-b from-primary to-secondary rounded"></div>
+        <div className="absolute left-2 top-1 h-full w-1 bg-gradient-to-b from-primary to-secondary rounded"></div>
 
         <div className="space-y-10 pl-12">
           {educationData.map((edu, idx) => (
@@ -41,7 +41,7 @@ export const Education = () => {
               className="relative bg-background border border-border rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow duration-300"
             >
               {/* Dot */}
-              <div className="absolute -left-6 top-6 w-4 h-4 rounded-full bg-primary ring-4 ring-background"></div>
+              <div className="absolute -left-9 top-0 w-6 h-6 text-2xl">🎓</div>
               
               <h3 className="text-xl font-semibold text-foreground">
                 {edu.degree}

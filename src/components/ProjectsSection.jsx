@@ -31,11 +31,11 @@ const projects = [
     id: 3,
     title: "All Events",
     description:
-      "An event management platform landing page allows to taking idea aboutevents, show the details of events and book.",
-    image: "https://i.ibb.co/1fwkSXHQ/Screenshot-2025-06-27-151831.png",
-    tags: ["React", "Node.js", "TailwindCSS", "React Router"],
-    demoUrl: "https://all-events-66a54.web.app/",
-    githubUrl: "#",
+      "An event management platform allows to create new events, show the details of events and book.",
+    image: "https://i.ibb.co/j9xQ2S6R/Screenshot-2025-07-05-005238.png",
+    tags: ["React", "Node.js", "TailwindCSS", "ExpressJs","MongoDB","JWT"],
+    demoUrl: "https://allevents-ph.netlify.app",
+    githubUrl: "https://github.com/tmdsifat98/event-management-ph-client",
   },
 ];
 
