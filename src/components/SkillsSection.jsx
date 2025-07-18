@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { cn } from "@/lib/utils";
 import {
   FaHtml5,
   FaJs,
@@ -9,8 +8,9 @@ import {
   FaFigma,
 } from "react-icons/fa";
 import { RiTailwindCssFill, RiFirebaseFill } from "react-icons/ri";
-import { SiExpress, SiMongodb } from "react-icons/si";
+import { SiExpress, SiMongodb, SiNextdotjs } from "react-icons/si";
 import { VscVscodeInsiders } from "react-icons/vsc";
+import { Fade } from "react-awesome-reveal";
 
 const skills = [
   // Frontend
@@ -42,7 +42,13 @@ const skills = [
     category: "frontend",
     color: "text-cyan-400",
   },
-
+  {
+    Icon: SiNextdotjs,
+    name: "NextJS",
+    level: 70,
+    category: "frontend",
+    color: "",
+  },
   // Backend
   {
     Icon: FaNodeJs,
@@ -67,12 +73,13 @@ const skills = [
   },
 
   // Tools
+
   {
     Icon: FaGithub,
     name: "Git/GitHub",
     level: 90,
     category: "tools",
-    color: "text-gray-800",
+    color: "text-gray-600",
   },
   {
     Icon: RiFirebaseFill,
@@ -116,12 +123,11 @@ export const SkillsSection = () => {
             <button
               key={key}
               onClick={() => setActiveCategory(category)}
-              className={cn(
-                "px-5 py-2 rounded-full transition-colors duration-300 capitalize cursor-pointer",
+              className={` px-5 py-2 rounded-full transition-colors duration-300 capitalize cursor-pointer ${
                 activeCategory === category
                   ? "bg-gradient-to-r from-rose-600 to-purple-600 text-primary-foreground"
                   : "bg-secondary/70 text-forefround hover:bd-secondary"
-              )}
+              }`}
             >
               {category}
             </button>
@@ -129,28 +135,29 @@ export const SkillsSection = () => {
         </div>
 
         <div className="container mx-auto max-w-4xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredSkills.map((skill, key) => (
-            <div
-              key={key}
-              className="bg-card p-6 rounded-lg shadow transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg"
-            >
-              <div className="text-left mb-4 flex items-center gap-5">
-                <h3 className="font-semibold text-lg"> {skill.name}</h3>
-                <skill.Icon size={21} className={skill.color} />
-              </div>
-              <div className="w-full gap-6 bg-secondary/50 h-2 flex items-center justify-between rounded-full">
-                <div
-                  className="bg-gradient-to-r from-rose-600 to-purple-600 h-2 rounded-full origin-left animate-[grow_1.5s_ease-out]"
-                  style={{ width: skill.level + "%" }}
-                />
-                <div className="text-right">
-                  <span className="text-sm text-muted-foreground">
-                    {skill.level}%
-                  </span>
+          {filteredSkills.map((skill, key) => {
+            return (
+              <Fade key={key}>
+                <div className="bg-card p-6 rounded-lg shadow transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg">
+                  <div className="text-left mb-4 flex items-center gap-5">
+                    <h3 className="font-semibold text-lg"> {skill.name}</h3>
+                    <skill.Icon size={21} className={skill.color} />
+                  </div>
+                  <div className="w-full gap-6 bg-secondary/50 h-2 flex items-center justify-between rounded-full">
+                    <div
+                      className="bg-gradient-to-r from-rose-600 to-purple-600 h-2 rounded-full origin-left animate-[grow_1.5s_ease-out]"
+                      style={{ width: skill.level + "%" }}
+                    />
+                    <div className="text-right">
+                      <span className="text-sm text-muted-foreground">
+                        {skill.level}%
+                      </span>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-          ))}
+              </Fade>
+            );
+          })}
         </div>
       </div>
     </section>

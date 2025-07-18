@@ -1,4 +1,5 @@
 import React from 'react';
+import { Fade } from 'react-awesome-reveal';
 
 export const Education = () => {
       const educationData = [
@@ -26,7 +27,8 @@ export const Education = () => {
   ];
 
   return (
-   <section id="education" className="w-full md:w-11/12 lg:w-1/2 mx-auto py-16 px-2">
+   <Fade>
+    <section id="education" className="w-full md:w-11/12 lg:w-1/2 mx-auto py-16 px-2">
       <h2 className="text-3xl font-bold mb-12 text-center">
         🎓 My <span className='text-gradient'>Education</span>
       </h2>
@@ -54,5 +56,6 @@ export const Education = () => {
         </div>
       </div>
     </section>
+   </Fade>
   );
 }
