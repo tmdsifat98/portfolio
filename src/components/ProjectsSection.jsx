@@ -164,19 +164,18 @@ export const ProjectsSection = () => {
             <div className="fixed inset-0 z-50 bg-black/10 backdrop-blur-sm bg-opacity-60 flex items-center justify-center p-4">
               <div
                 className={cn(
-                  "rounded-lg max-w-3xl w-full max-h-[90vh] overflow-y-auto relative shadow-xl p-6 pt-10",
-                  "bg-gray-300 dark:bg-gray-800 text-gray-100"
+                  "rounded-lg max-w-3xl w-full max-h-[90vh] overflow-y-auto relative shadow-xl p-6 pt-10 bg-card"
                 )}
               >
                 <button
                   onClick={handleClose}
-                  className="absolute top-2 right-2 text-gray-100 hover:text-red-600 cursor-pointer"
+                  className="absolute top-2 right-2 text-gray-500 hover:text-red-600 cursor-pointer"
                 >
                   <X size={24} />
                 </button>
 
                 <img
-                  src={selectedProject.image}
+                  src={selectedProject.image} 
                   alt={selectedProject.title}
                   className="w-full h-84 object-cover rounded-lg mb-4"
                 />

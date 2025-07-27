@@ -89,7 +89,7 @@ export const ContactSection = () => {
                 </div>
               </div>
 
-              <div className="p-6">
+              <div className="px-6">
                 <h4 className="font-medium text-start mb-4 text-glow">
                   {" "}
                   Connect With Me

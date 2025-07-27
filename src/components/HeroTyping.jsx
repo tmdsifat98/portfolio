@@ -3,7 +3,7 @@ import { Typewriter } from "react-simple-typewriter";
 
 const HeroTyping = () => {
   return (
-    <h1 className="text-2xl font-bold text-center mt-7">
+    <h1 className="text-2xl font-bold text-center mt-5">
       <span>I am a </span>
       <span className="text-gradient">
         <Typewriter
