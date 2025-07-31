@@ -29,7 +29,7 @@ The user interface, styled with TailwindCSS, offers an intuitive and responsive 
       "Stripe",
     ],
     demoUrl: "https://edunest-st.web.app",
-    githubUrl: "#",
+    githubUrl: "https://github.com/tmdsifat98/Edunest-client",
   },
   {
     id: 2,
