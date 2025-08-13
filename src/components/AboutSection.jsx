@@ -50,7 +50,7 @@ export const AboutSection = () => {
               <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
                 <a
                   href="#contact"
-                  className="px-6 py-2 rounded-full border border-primary font-semibold transition-all duration-300 bg-gradient-to-r from-rose-600 to-purple-600 bg-[length:100%_100%] hover:bg-[length:0%_100%] bg-no-repeat bg-left"
+                  className="px-6 py-2 rounded-full border border-primary font-semibold transition-all duration-300 bg-gradient-to-r from-[#f00739] to-purple-600 bg-[length:100%_100%] hover:bg-[length:0%_100%] bg-no-repeat bg-left"
                 >
                   Get In Touch
                 </a>
@@ -58,7 +58,7 @@ export const AboutSection = () => {
                 <a
                   target="_blank"
                   href="https://drive.google.com/file/d/15LJNC-HHZB5q9yNDGM25R5mtCvkHFcER/view?usp=sharing"
-                  className="px-6 py-2 rounded-full border flex items-center justify-center gap-2 border-primary font-semibold transition-all duration-300 bg-gradient-to-r from-rose-600 to-purple-600 bg-[length:0%_100%] hover:bg-[length:100%_100%] bg-no-repeat bg-left"
+                  className="px-6 py-2 rounded-full border flex items-center justify-center gap-2 border-primary font-semibold transition-all duration-300 bg-gradient-to-r from-[#f00739] to-purple-600 bg-[length:0%_100%] hover:bg-[length:100%_100%] bg-no-repeat bg-left"
                 >
                   Download Resume <FaDownload />
                 </a>

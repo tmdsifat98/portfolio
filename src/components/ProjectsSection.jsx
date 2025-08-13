@@ -221,7 +221,7 @@ export const ProjectsSection = () => {
 
           <div className="text-center mt-12">
             <a
-              className="w-fit flex items-center mx-auto gap-2 px-6 py-2 rounded-full border  border-primary font-semibold transition-all duration-300 bg-gradient-to-r from-rose-600 to-purple-600 bg-[length:100%_100%] hover:bg-[length:0%_100%] bg-no-repeat bg-left"
+              className="w-fit flex items-center mx-auto gap-2 px-6 py-2 rounded-full border  border-primary font-semibold transition-all duration-300 bg-gradient-to-r from-[#f00739] to-purple-600 bg-[length:100%_100%] hover:bg-[length:0%_100%] bg-no-repeat bg-left"
               target="_blank"
               href="https://github.com/tmdsifat98"
             >

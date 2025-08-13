@@ -4,14 +4,24 @@ import { useState } from "react";
 import { ThemeToggle } from "./ThemeToggle";
 import logo from "../../public/logo2.png";
 import useActiveSection from "../hooks/useActiveSection";
+import {
+  FaHome,
+  FaUser,
+  FaCode,
+  FaBriefcase,
+  FaProjectDiagram,
+  FaGraduationCap,
+  FaEnvelope,
+} from "react-icons/fa";
+
 const navItems = [
-  { name: "Home", href: "#hero" },
-  { name: "About", href: "#about" },
-  { name: "Skills", href: "#skills" },
-  { name: "Experience", href: "#experience" },
-  { name: "Projects", href: "#projects" },
-  { name: "Education", href: "#education" },
-  { name: "Contact", href: "#contact" },
+  { name: "Home", href: "#hero", icon: <FaHome /> },
+  { name: "About", href: "#about", icon: <FaUser /> },
+  { name: "Skills", href: "#skills", icon: <FaCode /> },
+  { name: "Experience", href: "#experience", icon: <FaBriefcase /> },
+  { name: "Projects", href: "#projects", icon: <FaProjectDiagram /> },
+  { name: "Education", href: "#education", icon: <FaGraduationCap /> },
+  { name: "Contact", href: "#contact", icon: <FaEnvelope /> },
 ];
 
 export const Navbar = () => {
@@ -44,12 +54,13 @@ export const Navbar = () => {
               key={key}
               href={item.href}
               className={cn(
-                "font-semibold transition-colors duration-300",
+                "font-semibold flex items-center gap-2 transition-colors duration-300 text-red-500",
                 activeSection === item.href.substring(1)
                   ? "text-gradient"
                   : "text-foreground/80"
               )}
             >
+              <span className="text-gradient">{item.icon}</span>
               {item.name}
             </a>
           ))}
@@ -69,7 +80,7 @@ export const Navbar = () => {
           <div className="hidden md:flex items-center space-x-3">
             <a
               href="#contact"
-              className="px-6 py-2 rounded-full border border-primary font-semibold transition-all duration-300 bg-gradient-to-r from-rose-600 to-purple-600 bg-[length:100%_100%] hover:bg-[length:0%_100%] bg-no-repeat bg-left"
+              className="px-6 py-2 rounded-full border border-primary font-semibold transition-all duration-300 bg-gradient-to-r from-[#f00739] to-purple-600 bg-[length:100%_100%] hover:bg-[length:0%_100%] bg-no-repeat bg-left"
             >
               Hire Me
             </a>
@@ -93,20 +104,21 @@ export const Navbar = () => {
               key={key}
               href={item.href}
               className={cn(
-                "font-semibold transition-colors duration-300",
+                "font-semibold flex items-center gap-2 transition-colors duration-300",
                 activeSection === item.href.substring(1)
                   ? "text-gradient"
                   : "text-white"
               )}
               onClick={() => setIsMenuOpen(false)}
             >
+              {item.icon}
               {item.name}
             </a>
           ))}
           <div className="md:hidden items-center space-x-3">
             <a
               href="#contact"
-              className="px-6 py-2 rounded-full border border-primary font-semibold transition-all duration-300 bg-gradient-to-r from-rose-600 to-purple-600 bg-[length:100%_100%] hover:bg-[length:0%_100%] bg-no-repeat bg-left"
+              className="px-6 py-2 rounded-full border border-primary font-semibold transition-all duration-300 bg-gradient-to-r from-[#f00739] to-purple-600 bg-[length:100%_100%] hover:bg-[length:0%_100%] bg-no-repeat bg-left"
             >
               Hire Me
             </a>

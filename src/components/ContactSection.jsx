@@ -96,7 +96,7 @@ export const ContactSection = () => {
                 </h4>
                 <div className="flex space-x-4 text-glow">
                   <a
-                    className="text-blue-600 hover:text-blue-500 transition"
+                    className="text-blue-700 hover:text-blue-500 transition"
                     href="https://www.facebook.com/Sifat.tarafder.5"
                     target="_blank"
                   >
@@ -173,7 +173,7 @@ export const ContactSection = () => {
                   type="submit"
                   disabled={isSubmitting}
                   className={cn(
-                    "px-6 py-2 rounded-full border  border-primary font-semibold transition-all duration-300 bg-gradient-to-r from-rose-600 to-purple-600 bg-[length:100%_100%] hover:bg-[length:0%_100%] bg-no-repeat bg-left w-full flex items-center justify-center gap-2 cursor-pointer"
+                    "px-6 py-2 rounded-full border  border-primary font-semibold transition-all duration-300 bg-gradient-to-r from-[#f00739] to-purple-600 bg-[length:100%_100%] hover:bg-[length:0%_100%] bg-no-repeat bg-left w-full flex items-center justify-center gap-2 cursor-pointer"
                   )}
                 >
                   {isSubmitting ? "Sending..." : "Send Message"}
